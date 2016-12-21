@@ -1,3 +1,20 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 <?php
 
 
@@ -21,7 +38,7 @@ if ($result=mysqli_query($con,$sql))
   {
     
   ?>  
-  // Fetch one and one row
+  
   <table style="width:100%">
   <tr>
     <th>Col 1</th>
@@ -32,14 +49,14 @@ if ($result=mysqli_query($con,$sql))
   while ($row=mysqli_fetch_assoc($result))
     {
     ?>  
-     <tr><td><?php echo $row["guestName"];?></td><td><?php echo $row["content"];?></td><td><?php echo $row["content"];?></td></tr>'; 
+     <tr><td><?php echo $row["guestName"];?></td><td><?php echo $row["content"];?></td><td><?php echo $row["content"];?></td></tr> 
    
     <?php  
     }
   ?>
    </table>
   <?php  
-  // Free result set
+  
   mysqli_free_result($result);
 }
 
