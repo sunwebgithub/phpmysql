@@ -1,6 +1,6 @@
 <?php
-$connect = mysql_connect("localhost","test","123") or die ("Error: could not connect to database");
-echo $connect;
+//$connect = mysql_connect("localhost","test","123") or die ("Error: could not connect to database");
+//echo $connect;
 
     $host = "localhost";   //See Step 3 about how to get host name
     $user = "test";                     //Your Cloud 9 username
