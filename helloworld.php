@@ -20,10 +20,20 @@ if (mysqli_connect_errno())
 if ($result=mysqli_query($con,$sql))
   {
   // Fetch one and one row
+  echo '<table style="width:100%">
+  <tr>
+    <th>Col 1</th>
+    <th>Col 2</th>
+    <th>Col 3</th>
+  </tr>';  
   while ($row=mysqli_fetch_row($result))
     {
-    printf ("%s (%s)\n",$row[0],$row[1]);
+     echo '<tr><td>'.$row[$i++].'</td><td>'.$row[$i++].'</td><td>'.$row[$i++].'</td></tr>'; 
+   
     }
+  
+    echo '</table>';
+    
   // Free result set
   mysqli_free_result($result);
 }
