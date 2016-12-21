@@ -8,7 +8,7 @@
     $port = 3306;                               //The port #. It is always 3306
 
 
-$con = mysqli_connect("localhost","test","123","guestbook", null, "/cloudsql/phpmysql1");
+$con = mysqli_connect("localhost","test","123","guestbook");
 
 // Check connection
 if (mysqli_connect_errno())
