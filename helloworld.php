@@ -15,6 +15,6 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }else{
-    echo "hello";
-    echo $con;
+    mysqli_query($con,"SELECT * FROM entries");
+    echo "Affected rows: " . mysqli_affected_rows($con);
 }
