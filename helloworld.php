@@ -14,4 +14,6 @@ $con = mysqli_connect("localhost","test","123","guestbook",null,"/cloudsql/phpmy
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+  }else{
+    echo "hello";
+}
