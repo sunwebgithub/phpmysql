@@ -19,21 +19,26 @@ if (mysqli_connect_errno())
 
 if ($result=mysqli_query($con,$sql))
   {
+    
+  ?>  
   // Fetch one and one row
-  echo '<table style="width:100%">
+  <table style="width:100%">
   <tr>
     <th>Col 1</th>
     <th>Col 2</th>
     <th>Col 3</th>
-  </tr>';  
-  while ($row=mysqli_fetch_row($result))
+  </tr>
+  <?php    
+  while ($row=mysqli_fetch_assoc($result))
     {
-     echo '<tr><td>'.$row[$i++].'</td><td>'.$row[$i++].'</td><td>'.$row[$i++].'</td></tr>'; 
+    ?>  
+     <tr><td><?php echo $row["guestName"];?></td><td><?php echo $row["content"];?></td><td><?php echo $row["content"];?></td></tr>'; 
    
+    <?php  
     }
-  
-    echo '</table>';
-    
+  ?>
+   </table>
+  <?php  
   // Free result set
   mysqli_free_result($result);
 }
