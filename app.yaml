@@ -5,7 +5,4 @@ handlers:
 - url: /.*
   script: helloworld.php
   
-env_variables:
-  MYSQL_DSN: mysql:unix_socket=/cloudsql/phpmysql-153207:asia-east1:phpmysql1
-  MYSQL_USER: test
-  MYSQL_PASSWORD: '123'
+
