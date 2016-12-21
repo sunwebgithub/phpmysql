@@ -9,6 +9,7 @@
     $port = 3306;                               //The port #. It is always 3306
 
     $connection = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
+echo $connection;
 
 //And now to perform a simple query to make sure it's working
     $query = "SELECT * FROM entries";
